@@ -1,0 +1,66 @@
+@import '../../../../styles/variables';
+
+.navbar-heb {
+  border-radius: 0;
+  border: hidden;
+  background: $heb-main-color;
+  color: #ffffff;
+  min-height: 40px;
+  z-index: 1050;
+}
+
+.nav-bar-menu > .nav-item {
+  min-height: 45px;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.navbar-header ::ng-deep a:hover, .navbar-heb .navbar-nav ::ng-deep > li > a:hover, .nav-bar-menu > .nav-item:hover {
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+}
+
+.navbar-user-profile {
+  min-width: 270px;
+  padding: 10px 10px 0;
+  color: black;
+}
+
+.navbar-heb ::ng-deep .navbar-nav .nav-link {
+  padding: .5em 1rem;
+  color: white;
+  font-size: 18px;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0;
+  margin-bottom: -3px;
+}
+
+.hr-heb {
+  border-style: inset;
+}
+
+.dropdown-heb {
+  background-color: #F7F7F7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.19);
+}
+
+#sideNavBtn {
+  width: 50px;
+}
+
+.appName {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #F2F6F8;
+}
+
+.heb-logo-left {
+  left: 60px;
+  position: absolute;
+  bottom: 2px;
+}

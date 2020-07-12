@@ -1,0 +1,30 @@
+button.btn.btn-heb.no-background {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: black;
+}
+.content-modal {
+  margin-bottom: 25px;
+}
+
+.result-temp {
+  margin-top: 25px;
+}
+
+label {
+  font-size: 14px;
+}
+
+.form-control {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed;
+}
+.custom-notify {
+  padding: 0.5rem 1.25rem;
+  margin-bottom: 0rem;
+}

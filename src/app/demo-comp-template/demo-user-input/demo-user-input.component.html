@@ -1,0 +1,14 @@
+<h3>Binding to user input events</h3>
+<button (click)="onClickMe()">Click me!</button>
+{{clickMessage}}`
+
+<h3>Get user input from the $event object</h3>
+<input (keyup)="onKey1($event)">
+
+<h3>Get user input from a template reference variable</h3>
+<input #box (keyup)="onKey2(box.value)">
+<p>{{values}}</p>
+
+<h3>Key event filtering (with key.enter)</h3>
+<input #box3 (keyup.enter)="onEnter(box3.value)">
+<p>{{text}}</p>

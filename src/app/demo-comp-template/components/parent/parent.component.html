@@ -1,0 +1,8 @@
+<p>This is the parent component !</p>
+<p>It wants to say "Hello" to its child.</p>
+It also wants to receive a response from its child.
+<p>
+  <b>Response from child : "{{ receivedChildMessage }}"</b>
+</p>
+<button (click)="sendToChild('Hello Child !')">Send to Child</button>
+<app-child [receivedParentMessage]="messageToSendP" (messageToEmit)="getMessage($event)"></app-child>

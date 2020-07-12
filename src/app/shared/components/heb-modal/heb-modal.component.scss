@@ -1,0 +1,46 @@
+@import "../../../../styles/variables";
+
+.heb-modal ::ng-deep button.close {
+  color: white;
+  opacity: 1;
+  outline: 0;
+}
+
+.heb-modal ::ng-deep button.close:hover {
+  color: white;
+  opacity: 1;
+}
+
+.heb-modal ::ng-deep button.close:focus {
+  color: white;
+  opacity: 1;
+}
+
+.heb-modal ::ng-deep .modal-header {
+  background-color: $heb-main-color;
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.heb-modal ::ng-deep .modal-title {
+  display: inline-block;
+  margin-right: auto;
+}
+
+.heb-modal ::ng-deep .modal-body {
+  font-size: 0.875rem;
+}
+
+.heb-modal ::ng-deep .modal-header .close {
+  margin-left: inherit;
+}
+
+.heb-modal ::ng-deep .modal-footer {
+  justify-content: flex-end !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+

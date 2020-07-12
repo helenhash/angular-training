@@ -1,0 +1,21 @@
+<!-- this is not wrapped in row or cols, define at higher level -->
+<div class="input-group input-group-sm">
+  <input class="form-control form-control-sm datePickerInput" placeholder="MM/DD/YYYY"
+         name="d" [(ngModel)]="datePickerObj" ngbDatepicker #d="ngbDatepicker" readonly
+         (ngModelChange)="dateSelected()" [minDate]="minDateStruct" [maxDate]="maxDateStruct" [firstDayOfWeek]="0" [outsideDays]="'hidden'">
+  <div class="input-group-append">
+    <button type="button" class="btn btn-heb datePickerToggler px-2"
+            [disabled]="disabled"
+            (click)="!disabled && d.toggle(); openDatepicker(d)">
+      <i class="fa fa-calendar"></i>&nbsp;
+    </button>
+  </div>
+  <div class="input-group-append">
+    <button type="button" class="btn btn-danger datePickerClear px-2"
+            *ngIf="hasClearButton"
+            [disabled]="!datePickerObj || disabled"
+            (click)="!disabled && clearDate(); d.close()">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+</div>

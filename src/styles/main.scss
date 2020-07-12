@@ -1,0 +1,56 @@
+// Our own variables that override bootstrap
+@import "variables";
+
+// main.scss files
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+/*
+ * Font Awesome 5.x
+ */
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+//@import "~font-awesome/scss/font-awesome";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+
+/**
+Override bootstrap for certain things all below.
+ */
+.has-danger > p-inputmask.ng-dirty.ng-invalid > .ui-inputtext {
+  border-color: red;
+}
+
+/*
+ * Extends the new .is-invalid class so the existing .has-danger classes can be used.
+ */
+.has-danger {
+  @extend .is-invalid;
+}
+
+.has-danger .form-control-feedback,
+.has-danger .form-control-label,
+.has-danger .col-form-label,
+.has-danger .form-check-label,
+.has-danger .custom-control,
+.has-danger .form-control {
+  color: #d9534f;
+}
+
+.has-danger .form-control {
+  border-color: #d9534f;
+}
+
+.has-danger .input-group-addon {
+  color: #d9534f;
+  border-color: #d9534f;
+  background-color: #fdf7f7;
+}
+
+.btn-warning, .btn-warning:hover, .btn-warning:disabled {
+  color: #fff !important;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+

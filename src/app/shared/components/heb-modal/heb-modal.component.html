@@ -1,0 +1,32 @@
+<div class="heb-modal shadow">
+
+  <div class="modal-header">
+    <ng-template [ngTemplateOutlet]="modalHeader ? modalHeader.template : defaultHeader"></ng-template>
+  </div>
+
+  <div class="modal-body">
+    <ng-template [ngTemplateOutlet]="modalContent.template"></ng-template>
+  </div>
+
+  <div class="modal-footer"> <!-- modal footer -->
+    <ng-template [ngTemplateOutlet]="modalFooter ? modalFooter.template : defaultFooter"></ng-template>
+  </div>
+
+</div>
+
+<ng-template #defaultHeader>
+  <h4 class="modal-title">{{ title }}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="onHeaderClose.emit()" *ngIf="showClose">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</ng-template>
+
+<ng-template #defaultFooter>
+  <div class="row no-gutters align-items-end">
+    <ng-container *ngFor="let action of modalActions">
+      <div class="col-auto">
+        <ng-template [ngTemplateOutlet]="action.template"></ng-template>
+      </div>
+    </ng-container>
+  </div>
+</ng-template>

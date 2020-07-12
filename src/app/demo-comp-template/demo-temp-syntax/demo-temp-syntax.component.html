@@ -1,0 +1,9 @@
+<h3>Interpolation </h3>
+<p>{{title}}</p>
+<p>The sum of 1 + 1 is {{1 + 1}}.</p>
+<h3>Data-binding</h3>
+<input [(ngModel)]="name" placeholder="type here" type="text">
+<p>Hi, my name is {{name}}</p>
+<button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+<h3>Inputs and Outputs</h3>
+<app-parent></app-parent>
