@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {from, interval, Observable, of} from "rxjs";
-import {map} from "rxjs/operators";
+import {filter, map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -149,5 +149,15 @@ export class ProductService {
         };
       })
     ).subscribe(this.observer);
+  }
+
+  // RxJS Filtering Operators
+
+  private filterDemo(){
+    from([1, 2, 3, 4, 5, 6])
+      .pipe(
+        filter((x) => x % 2 === 0) // số chẵn
+      )
+      .subscribe(console.log); // output: 2, 4, 6
   }
 }
