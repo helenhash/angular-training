@@ -21,43 +21,16 @@ import {HebRoute} from '@app/app-routing.module';
 })
 export class HebNavBarComponent implements OnInit {
 
-  @Input() pageTitle = '';
-  // @Input() currentUser: AuthModel;
-  @Input() showToggle = false;
-  @Input() showMenuToggle = false;
-  @Input() isSideNavOpen: boolean;
-  @Input() routes: HebRoute[];
+  navbarOpen = false;
 
-  @Output() toggleSideNav = new EventEmitter<any>();
-  @Output() toggleMenuConfig = new EventEmitter<any>();
-  @Output() logoutClick = new EventEmitter<any>();
-
-  // @ContentChild(HebNavBarPageInfoComponent) navBarPageInfo: HebNavBarPageInfoComponent | null;
-  // @ContentChild(HebNavBarUserPanelComponent) navBarUserPanel: HebNavBarUserPanelComponent | null;
-  // @ContentChild(HebNavBarUserActionComponent) navBarUserAction: HebNavBarUserActionComponent | null;
-  // @ContentChild(HebNavBarUserInfoComponent) navBarUserInfo: HebNavBarUserInfoComponent | null;
-  // @ContentChildren(HebNavBarActionComponent) navBarActions: QueryList<HebNavBarActionComponent>;
-
-  appConstants = AppConstants;
-  appName = 'Angular Demo';
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
   constructor() {
   }
 
   ngOnInit() {
   }
 
-  /**
-   * Side nav button click handler.
-   */
-  toggleSideNavClick() {
-    this.toggleSideNav.emit();
-  }
-
-  /**
-   * Logout
-   */
-  logout() {
-    this.logoutClick.emit();
-  }
 
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {RouterConfig} from '@app/app.constants';
+import {HomeComponent} from "@app/home/home.component";
 
 export class RouteConstants {
   // this object drives the side menu, use sub menu for collapse-able side menu
@@ -34,8 +35,7 @@ export interface HebSubRoute {
 const routes: Routes = [
   {
     path: '',
-    redirectTo: RouterConfig.COMP_DEMO.path,
-    pathMatch: 'full',
+    component: HomeComponent
   },
   {
     path: RouterConfig.COMP_DEMO.path,
