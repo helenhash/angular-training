@@ -5,7 +5,7 @@ import {TemplateDrivenComponent} from '@app/demo-form/template-driven/template-d
 
 const routes: Routes = [
   {
-    path: 'reactive',
+      path: 'reactive',
     component: DemoReactiveComponent,
     data: { pageTitle: 'Reactive Form Demo' }
   },

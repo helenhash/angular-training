@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'demo-user-input',
-  templateUrl: './demo-user-input.component.html',
-  styleUrls: ['./demo-user-input.component.scss']
+  selector: 'demo-temp-syntax',
+  templateUrl: './demo-data-binding.component.html',
+  styleUrls: ['./demo-data-binding.component.scss']
 })
-export class DemoUserInputComponent implements OnInit {
+export class DemoDataBindingComponent implements OnInit {
+
+  title = 'Test 1';
+  name = 'Angular 5';
+  isSpecial = true;
   clickMessage = '';
   values = '';
   text = '';

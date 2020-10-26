@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DemoTempSyntaxComponent } from './demo-temp-syntax.component';
+import { DemoDataBindingComponent } from './demo-data-binding.component';
 
 describe('DemoTempSyntaxComponent', () => {
-  let component: DemoTempSyntaxComponent;
-  let fixture: ComponentFixture<DemoTempSyntaxComponent>;
+  let component: DemoDataBindingComponent;
+  let fixture: ComponentFixture<DemoDataBindingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemoTempSyntaxComponent ]
+      declarations: [ DemoDataBindingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DemoTempSyntaxComponent);
+    fixture = TestBed.createComponent(DemoDataBindingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

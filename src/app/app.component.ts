@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {HebRoute, RouteConstants} from "@app/app-routing.module";
+import {DemoRoute, RouteConstants} from "@app/app-routing.module";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,6 @@ import {HebRoute, RouteConstants} from "@app/app-routing.module";
 export class AppComponent {
   title = 'my-app';
   @Input() menu: 'side' | 'horizontal' | 'navBar' | 'overlay' | 'none' = 'side';
-  @Input() routes: HebRoute[] = RouteConstants.ROUTES;
-  @Input() navBarRoutes: HebRoute[];
+  @Input() routes: DemoRoute[] = RouteConstants.ROUTES;
+  @Input() navBarRoutes: DemoRoute[];
 }

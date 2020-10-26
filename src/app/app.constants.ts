@@ -15,12 +15,9 @@ export interface RouteLink {
 }
 
 export const RouterConfig = {
-  LOGIN: {path: '', link: '/'},
   HOME: {path: '', link: '/'},
   COMP_DEMO: {path: 'comp-demp', link: '/comp-demp', title: 'Component and Template Demo'},
   FORM_DEMO: {path: 'form', link: '/form', title: 'Form and Validation Demo'},
-  STORE_MOVE: {path: 'store-move', link: '/store-move', title: 'Store Move'},
-  STORE_SETUP: {path: 'store-setup', link: '/store-setup', title: 'Store Setup'},
-  ZONE_MAINTENANCE: {path: 'zone-maintenance', link: '/zone-maintenance', title: 'Zone Maintenance'},
+  DI_DEMO: {path: 'di', link: '/di', title: 'Dependency Injection'},
   NOT_FOUND: {path: '**', link: null, title: 'Page Not Found'}
 };

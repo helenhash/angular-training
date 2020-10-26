@@ -11,17 +11,18 @@ import {
   ViewChild
 } from '@angular/core';
 import {AppConstants} from '@app/app.constants';
-import {HebRoute} from '@app/app-routing.module';
+import {DemoRoute, RouteConstants} from '@app/app-routing.module';
 
 
 @Component({
-  selector: 'heb-nav-bar',
-  templateUrl: './heb-nav-bar.component.html',
-  styleUrls: ['./heb-nav-bar.component.scss']
+  selector: 'com-nav-bar',
+  templateUrl: './common-nav-bar.component.html',
+  styleUrls: ['./common-nav-bar.component.scss']
 })
-export class HebNavBarComponent implements OnInit {
+export class CommonNavBarComponent implements OnInit {
 
   navbarOpen = false;
+  routes: DemoRoute[] = RouteConstants.ROUTES
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;

@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DemoTempSyntaxComponent } from './demo-temp-syntax/demo-temp-syntax.component';
+import { DemoDataBindingComponent } from './demo-data-binding/demo-data-binding.component';
 import {FormsModule} from '@angular/forms';
 import {ParentComponent} from '@app/demo-comp-template/components/parent/parent.component';
 import {ChildComponent} from '@app/demo-comp-template/components/child/child.component';
 import {DemoCompTemplateRoutingModule} from '@app/demo-comp-template/demo-comp-template.routing.module';
-import {DemoUserInputComponent} from '@app/demo-comp-template/demo-user-input/demo-user-input.component';
 import {HighlightDirective} from '@app/demo-comp-template/directives/highlight.directive';
 import {DemoDirectiveComponent} from '@app/demo-comp-template/demo-directive/demo-directive.component';
 import {UnlessDirective} from '@app/demo-comp-template/directives/unless.directive';
@@ -19,10 +18,9 @@ import { CountdownTimerComponent } from './components/countdown-timer/countdown-
 
 @NgModule({
   declarations: [
-    DemoTempSyntaxComponent,
+    DemoDataBindingComponent,
     ChildComponent,
     ParentComponent,
-    DemoUserInputComponent,
     HighlightDirective,
     DemoDirectiveComponent,
     UnlessDirective,

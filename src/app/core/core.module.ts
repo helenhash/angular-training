@@ -1,7 +1,7 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {SharedModule} from '@app/shared/shared.module';
 import {HebBaseComponent} from './components/heb-base/heb-base.component';
-import {HebNavBarComponent} from '@app/core/components/heb-nav-bar/heb-nav-bar.component';
+import {CommonNavBarComponent} from '@app/core/components/heb-nav-bar/common-nav-bar.component';
 
 @NgModule({
   imports: [
@@ -9,11 +9,11 @@ import {HebNavBarComponent} from '@app/core/components/heb-nav-bar/heb-nav-bar.c
   ],
   declarations: [
     HebBaseComponent,
-    HebNavBarComponent
+    CommonNavBarComponent
   ],
   exports: [
     HebBaseComponent,
-    HebNavBarComponent
+    CommonNavBarComponent
   ],
   providers: [
   ]

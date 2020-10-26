@@ -1,20 +1,16 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {DemoTempSyntaxComponent} from '@app/demo-comp-template/demo-temp-syntax/demo-temp-syntax.component';
-import {DemoUserInputComponent} from '@app/demo-comp-template/demo-user-input/demo-user-input.component';
+import {DemoDataBindingComponent} from '@app/demo-comp-template/demo-data-binding/demo-data-binding.component';
 import {DemoDirectiveComponent} from '@app/demo-comp-template/demo-directive/demo-directive.component';
 import { DemoHookComponent } from './demo-hook/demo-hook.component';
+import {DemoPipeComponent} from '@app/demo-comp-template/demo-pipe/demo-pipe.component';
+import {DemoCompInteractionComponent} from '@app/demo-comp-template/demo-comp-interaction/demo-comp-interaction.component';
 
 const routes: Routes = [
   {
-    path: 'temp-syntax',
-    component: DemoTempSyntaxComponent,
-    data: { pageTitle: 'Component and Template Demo' }
-  },
-  {
-    path: 'user-action',
-    component: DemoUserInputComponent,
-    data: { pageTitle: 'Component and Template Demo' }
+    path: 'data-binding',
+    component: DemoDataBindingComponent,
+    data: { pageTitle: 'Data Binding' }
   },
   {
     path: 'directives',
@@ -22,9 +18,19 @@ const routes: Routes = [
     data: { pageTitle: 'Directive Demo' }
   },
   {
+    path: 'pipes',
+    component: DemoPipeComponent,
+    data: { pageTitle: 'Pipes Demo' }
+  },
+  {
     path: 'hook-demo',
     component: DemoHookComponent,
     data: { pageTitle: 'Hook Lifecycle Demo' }
+  },
+  {
+    path: 'interaction',
+    component: DemoCompInteractionComponent,
+    data: { pageTitle: 'Component Interaction Demo' }
   }
 ];
 
