@@ -7,24 +7,25 @@ export class RouteConstants {
   // this object drives the side menu, use sub menu for collapse-able side menu
   public static ROUTES: DemoRoute[] = [
     {
-      text: RouterConfig.COMP_DEMO.title, icon: '1', url: RouterConfig.COMP_DEMO.link,
-      access: [], isCollapsed: false
+      id: 'comp_demo', text: RouterConfig.COMP_DEMO.title, icon: '1', url: RouterConfig.COMP_DEMO.link,
+      access: [], isCollapsed: false, subMenu: [{text: 'Demo', url: RouterConfig.COMP_DEMO.link, access: []}]
     },
     {
-      text: RouterConfig.FORM_DEMO.title, icon: '2',
+      id: 'form_demo', text: RouterConfig.FORM_DEMO.title, icon: '2',
       url: RouterConfig.FORM_DEMO.link, access: [], isCollapsed: false,
     },
     {
-      text: RouterConfig.DI_DEMO.title, icon: '3',
+      id: 'di_demo', text: RouterConfig.DI_DEMO.title, icon: '3',
       url: RouterConfig.DI_DEMO.link, access: [], isCollapsed: false,
     }
   ];
 }
 
 export interface DemoRoute {
+  id: string;
   text: string;
   icon: string;
-      url: string;
+  url: string;
   access: string[];
   isCollapsed: boolean;
   subMenu?: SubRoute[];

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">DEMO</a>
+<a class="navbar-brand" href="#">DEMO</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,20 +7,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <ng-container *ngFor="let route of routes">
-        <li class="nav-item active">
-<!--          <a class="nav-link" href="{{route.url}}">{{route.text}} <span class="sr-only">(current)</span></a>-->
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+        <li class="nav-item dropdown" >
+          <a appExpandMenu class="nav-link dropdown-toggle" href="#" id="{{route.id}}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
              (click)="toggleNavbar()">
             {{route.text}}
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" [ngClass]="{ 'show': navbarOpen }">
+
+          <div class="dropdown-menu" aria-labelledby="test" >
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
+          </a>
         </li>
+
       </ng-container>
+
       <!--<li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
@@ -40,9 +42,40 @@
         </div>
       </li>-->
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+
+    <!--<ul class="nav pl-3 nav-bar-menu">
+      <ng-container *ngFor="let route of routes">
+        <ng-container>
+          <ng-container *ngIf="route.subMenu && route.subMenu.length > 0 else noSubMenu">
+            <li class="nav-item dropdown d-flex align-items-center" ngbDropdown placement="bottom-left">
+              <a class="nav-link dropdown-toggle px-3" [id]="route.text" ngbDropdownToggle>
+                <i class="fa dropdown-icon px-2" [ngClass]="'fa-' + route.icon"></i>{{ route.text }}
+              </a>
+              <div ngbDropdownMenu>
+                <ng-container *ngFor="let subMenuItem of route.subMenu">
+                  <ng-container>
+                    <button class="dropdown-item" routerLink="{{ subMenuItem.url }}">{{ subMenuItem.text }}</button>
+                  </ng-container>
+                </ng-container>
+              </div>
+            </li>
+          </ng-container>
+
+          <ng-template #noSubMenu>
+            <ng-container>
+              <li class="nav-item d-flex align-items-center" routerLink="{{ route.url }}">
+                <a class="nav-link px-3 align-self-center" [id]="route.text">
+                  <i class="fa dropdown-icon px-2" [ngClass]="'fa-' + route.icon"></i>{{ route.text }}
+                </a>
+              </li>
+            </ng-container>
+          </ng-template>
+        </ng-container>
+      </ng-container>
+    </ul>-->
+    <!--<form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form>-->
   </div>
 </nav>
