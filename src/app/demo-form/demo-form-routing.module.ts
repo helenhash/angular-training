@@ -5,14 +5,14 @@ import {TemplateDrivenComponent} from '@app/demo-form/template-driven/template-d
 
 const routes: Routes = [
   {
-      path: 'reactive',
+    path: 'reactive',
     component: DemoReactiveComponent,
     data: { pageTitle: 'Reactive Form Demo' }
   },
   {
     path: 'template-driven',
     component: TemplateDrivenComponent,
-    data: { pageTitle: 'template driven Form Demo' }
+    data: { pageTitle: 'Template driven Form Demo' }
   }
 ];
 
@@ -25,4 +25,4 @@ const routes: Routes = [
   ]
 })
 
-export class DemoReactiveFormRoutingModule { }
+export class DemoFormRoutingModule { }

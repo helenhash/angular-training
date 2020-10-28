@@ -7,22 +7,28 @@ export class RouteConstants {
   // this object drives the side menu, use sub menu for collapse-able side menu
   public static ROUTES: DemoRoute[] = [
     {
-      id: 'comp_demo', text: RouterConfig.COMP_DEMO.title, icon: '1', url: RouterConfig.COMP_DEMO.link,
-      access: [], isCollapsed: false, subMenu: [{text: 'Demo', url: RouterConfig.COMP_DEMO.link, access: []}]
+      text: RouterConfig.COMP_DEMO.title, icon: '1', url: RouterConfig.COMP_DEMO.link,
+      access: [], isCollapsed: false,
+      subMenu: [{text: RouterConfig.DATA_BIND.title, url: RouterConfig.DATA_BIND.link, access: []},
+        {text: RouterConfig.PIPES.title, url: RouterConfig.PIPES.link, access: []},
+        {text: RouterConfig.DIRECTIVES.title, url: RouterConfig.DIRECTIVES.link, access: []},
+        {text: RouterConfig.HOOK.title, url: RouterConfig.HOOK.link, access: []},
+        {text: RouterConfig.COMP_INTERACTION.title, url: RouterConfig.COMP_INTERACTION.link, access: []}]
     },
     {
-      id: 'form_demo', text: RouterConfig.FORM_DEMO.title, icon: '2',
-      url: RouterConfig.FORM_DEMO.link, access: [], isCollapsed: false,
+      text: RouterConfig.FORM_DEMO.title, icon: '2',
+      url: RouterConfig.FORM_DRIVEN_DEMO.link, access: [], isCollapsed: false,
+      subMenu: [{text: RouterConfig.FORM_DRIVEN_DEMO.title, url: RouterConfig.FORM_DRIVEN_DEMO.link, access: []},
+        {text: RouterConfig.FORM_REACTIVE_DEMO.title, url: RouterConfig.FORM_REACTIVE_DEMO.link, access: []}]
     },
     {
-      id: 'di_demo', text: RouterConfig.DI_DEMO.title, icon: '3',
+      text: RouterConfig.DI_DEMO.title, icon: '3',
       url: RouterConfig.DI_DEMO.link, access: [], isCollapsed: false,
     }
   ];
 }
 
 export interface DemoRoute {
-  id: string;
   text: string;
   icon: string;
   url: string;
@@ -51,7 +57,7 @@ const routes: Routes = [
   {
     path: RouterConfig.FORM_DEMO.path,
     loadChildren: () => {
-      return import('./demo-form/demo-reactive-form.module').then(mod => mod.DemoReactiveFormModule);
+      return import('./demo-form/demo-form.module').then(mod => mod.DemoFormModule);
     },
   },
   {

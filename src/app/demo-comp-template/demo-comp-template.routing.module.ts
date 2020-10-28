@@ -23,7 +23,7 @@ const routes: Routes = [
     data: { pageTitle: 'Pipes Demo' }
   },
   {
-    path: 'hook-demo',
+    path: 'lifecycle',
     component: DemoHookComponent,
     data: { pageTitle: 'Hook Lifecycle Demo' }
   },

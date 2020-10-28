@@ -1,20 +1,20 @@
-  <heb-modal [title]="title" showClose="true" (onHeaderClose)="activeModal.dismiss()">
+  <cus-modal [title]="title" showClose="true" (onHeaderClose)="activeModal.dismiss()">
 
-    <heb-modal-content>
+    <modal-content>
       <div>{{content}}</div>
-    </heb-modal-content>
+    </modal-content>
 
-    <heb-modal-action>
+    <modal-action>
       <button heb-button type="button" size="md" class="no-background"
               (click)="activeModal.dismiss()">No
       </button>
-    </heb-modal-action>
+    </modal-action>
 
-    <heb-modal-action>
+    <modal-action>
       <button id="yesBtn" heb-button type="button" size="md"
               (click)="onRemoveSelected()" autofocus ="true">
         Yes
       </button>
-    </heb-modal-action>
+    </modal-action>
 
-  </heb-modal>
+  </cus-modal>

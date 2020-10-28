@@ -16,19 +16,19 @@ import {NgbDateParserFormatter, NgbDatepickerConfig, NgbDateStruct} from '@ng-bo
 import {isNullOrUndefined} from 'util';
 
 @Component({
-  selector: 'heb-date-picker',
-  templateUrl: './heb-date-picker.component.html',
-  styleUrls: ['./heb-date-picker.component.scss'],
+  selector: 'date-picker',
+  templateUrl: './date-picker.component.html',
+  styleUrls: ['./date-picker.component.scss'],
   providers: [
     NgbDatepickerConfig,
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => HebDatePickerComponent),
+      useExisting: forwardRef(() => DatePickerComponent),
       multi: true
     }
   ]
 })
-export class HebDatePickerComponent implements ControlValueAccessor, OnInit, OnChanges {
+export class DatePickerComponent implements ControlValueAccessor, OnInit, OnChanges {
 
   @Input() minDate: Date; // if not passed in, no min date
   @Input() maxDate: Date; // if not passed in, no max date

@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import {HebBaseComponent} from '@app/core/components/heb-base/heb-base.component';
+import {BaseComponent} from '@app/core/components/base/base.component';
 
 @Component({
   selector: 'zmove-delete-modal',
-  templateUrl: './zmove-confirm-modal.component.html',
-  styleUrls: ['./zmove-confirm-modal.component.scss']
+  templateUrl: './confirm-modal.component.html',
+  styleUrls: ['./confirm-modal.component.scss']
 })
-export class ZmoveConfirmModalComponent extends HebBaseComponent implements OnInit {
+export class ConfirmModalComponent extends BaseComponent implements OnInit {
 
   @Input() title = 'Confirm';
   @Input() content = 'Are you sure you want to delete the selected rows?';

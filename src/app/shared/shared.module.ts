@@ -2,22 +2,20 @@ import {CommonModule} from '@angular/common';
 import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-import {HebDatePickerComponent} from '@app/shared/components/heb-date-picker/heb-date-picker.component';
+import {DatePickerComponent} from '@app/shared/components/date-picker/date-picker.component';
 import {
-  HebModalActionComponent,
-  HebModalComponent,
-  HebModalContentComponent,
-  HebModalFooterComponent,
-  HebModalHeaderComponent
-} from '@app/shared/components/heb-modal/heb-modal.component';
+  ModalActionComponent,
+  CusModalComponent,
+  ModalContentComponent,
+} from '@app/shared/components/my-modal/cus-modal.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {MatchHeightDirective} from './directives/match-height.directive';
 import {PhonePipe} from './pipes/phone.pipe';
-import {ZmoveConfirmModalComponent} from './components/zmove-confirm-modal/zmove-confirm-modal.component';
+import {ConfirmModalComponent} from './components/confirm-modal/confirm-modal.component';
+import {ExpandMenuDirective} from "@app/shared/directives/expand-menu.directive";
 
 
-const HEB_MODAL_CLASSES = [HebModalActionComponent, HebModalComponent, HebModalContentComponent,
-  HebModalHeaderComponent, HebModalFooterComponent];
+const MODAL_CLASSES = [ModalActionComponent, CusModalComponent, ModalContentComponent];
 
 @NgModule({
   imports: [
@@ -30,10 +28,11 @@ const HEB_MODAL_CLASSES = [HebModalActionComponent, HebModalComponent, HebModalC
   declarations: [
     PhonePipe,
     MatchHeightDirective,
-    HEB_MODAL_CLASSES,
-    HebDatePickerComponent,
-    HebModalComponent,
-    ZmoveConfirmModalComponent,
+    MODAL_CLASSES,
+    DatePickerComponent,
+    CusModalComponent,
+    ConfirmModalComponent,
+    ExpandMenuDirective
   ],
   exports: [
     CommonModule,
@@ -43,14 +42,15 @@ const HEB_MODAL_CLASSES = [HebModalActionComponent, HebModalComponent, HebModalC
     NgbModule,
     PhonePipe,
     MatchHeightDirective,
-    HEB_MODAL_CLASSES,
-    HebDatePickerComponent,
+    MODAL_CLASSES,
+    DatePickerComponent,
+    ExpandMenuDirective
   ],
   providers: [
     PhonePipe
   ],
   entryComponents: [
-    ZmoveConfirmModalComponent,
+    ConfirmModalComponent,
   ],
   schemas: [NO_ERRORS_SCHEMA],
 })

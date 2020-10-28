@@ -5,7 +5,7 @@ import {AppConstants} from '@app/app.constants';
 @Component({
   template: ``
 })
-export class HebBaseComponent implements OnDestroy {
+export class BaseComponent implements OnDestroy {
 
   destroySubject$: Subject<void> = new Subject<void>();
 

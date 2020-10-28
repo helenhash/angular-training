@@ -1,20 +1,18 @@
 import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {SharedModule} from '@app/shared/shared.module';
-import {HebBaseComponent} from './components/heb-base/heb-base.component';
-import {CommonNavBarComponent} from '@app/core/components/heb-nav-bar/common-nav-bar.component';
-import {ExpandMenuDirective} from "@app/core/directives/expand-menu.directive";
+import {BaseComponent} from './components/base/base.component';
+import {CommonNavBarComponent} from '@app/core/components/nav-bar/common-nav-bar.component';
 
 @NgModule({
   imports: [
     SharedModule,
   ],
   declarations: [
-    HebBaseComponent,
-    CommonNavBarComponent,
-    ExpandMenuDirective
+    BaseComponent,
+    CommonNavBarComponent
   ],
   exports: [
-    HebBaseComponent,
+    BaseComponent,
     CommonNavBarComponent
   ],
   providers: [
