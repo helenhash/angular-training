@@ -1,5 +1,6 @@
 import {Component, OnInit, Provider} from '@angular/core';
-import {ProductService} from '@app/demo-di/service/product.service';
+import {ProductServie} from '@app/demo-di/service/product.service';
+import {ProductModel} from "@app/demo-di/service/product.model";
 
 @Component({
   selector: 'app-product',
@@ -8,10 +9,21 @@ import {ProductService} from '@app/demo-di/service/product.service';
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductServie) { }
 
   ngOnInit() {
-    console.log(this.productService.getProductName());
-    console.log(this.productService.demoPromise());
+    this.productService.getProductName().subscribe(
+      response => {
+        console.log(response);
+      }
+    );
+    const result = {} as ProductModel;
+    result.name = 'Rice';
+    result.description = 'Yum';
+    this.productService.createProduct(result).subscribe(
+      response => {
+        console.log(response);
+      }
+    );
   }
 }
