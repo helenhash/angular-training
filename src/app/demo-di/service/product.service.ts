@@ -19,4 +19,11 @@ export class ProductServie {
     return this.http.put<any>('/api/spring-rest/addProduct', models, httpOptions);
   }
 
+  postFile(fileToUpload: File): Observable<any> {
+    const endpoint = '/api/spring-rest/upload';
+    const formData: FormData = new FormData();
+    formData.append('file', fileToUpload, fileToUpload.name);
+    return this.http.post(endpoint, formData);
+  }
+
 }

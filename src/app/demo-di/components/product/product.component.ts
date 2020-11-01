@@ -8,7 +8,7 @@ import {ProductModel} from "@app/demo-di/service/product.model";
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
+  fileToUpload: File = null;
   constructor(private productService: ProductServie) { }
 
   ngOnInit() {
@@ -26,4 +26,17 @@ export class ProductComponent implements OnInit {
       }
     );
   }
+
+  handleFileInput(files: File[]) {
+    this.fileToUpload = files[0];
+  }
+
+  uploadFileToActivity() {
+    this.productService.postFile(this.fileToUpload).subscribe(data => {
+      console.log(data);
+    }, error => {
+      console.log(error);
+    });
+  }
+
 }
