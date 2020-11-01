@@ -1,25 +1,19 @@
-<label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
-<p>
-  Value: {{ name.value }}
-</p>
-<p>
-  <button (click)="updateName()">Update Name</button>
-</p>
-<hr/>
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  
-  <label>
-    First Name:
-    <input type="text" formControlName="firstName">
-  </label>
+  <div class="form-group row">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+           formControlName="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group row">
+    <label for="exampleInputName">Password</label>
+    <input type="text" class="form-control" id="exampleInputName" placeholder="Enter your name"
+           formControlName="firstName">
+  </div>
+  <div class="form-group row">
+    <button (click)="updateProfile()" class="btn btn-success">Update Profile</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid" style="margin-left: 20px">Submit</button>
+  </div>
 
-  <label>
-    Last Name:
-    <input type="text" formControlName="lastName">
-  </label>
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-  <button (click)="updateProfile()">Update Profile</button>
 </form>
+

@@ -12,13 +12,9 @@ export class NameEditorComponent {
 
   profileForm = new FormGroup({
     firstName: new FormControl('', [forbiddenNameValidator(/bob/i)]),
-    lastName: new FormControl(''),
+    email: new FormControl(''),
   });
   constructor() { }
-
-  updateName() {
-    this.name.setValue('Nancy');
-  }
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
@@ -28,7 +24,7 @@ export class NameEditorComponent {
   updateProfile() {
     this.profileForm.patchValue({
       firstName: 'Nancy',
-      lastName: 'Lee'
+      email: 'Lee@gmail.com'
     });
   }
 }
