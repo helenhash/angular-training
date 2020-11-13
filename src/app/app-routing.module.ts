@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {RouterConfig} from '@app/app.constants';
 import {HomeComponent} from '@app/home/home.component';
+import {LoginComponent} from '@app/login/login.component';
 
 export class RouteConstants {
   // this object drives the side menu, use sub menu for collapse-able side menu
@@ -46,7 +47,7 @@ export interface SubRoute {
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: LoginComponent
   },
   {
     path: RouterConfig.COMP_DEMO.path,
