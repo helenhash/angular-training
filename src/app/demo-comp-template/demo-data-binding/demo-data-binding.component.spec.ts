@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DemoDataBindingComponent } from './demo-data-binding.component';
+import {DemoDataBindingComponent} from './demo-data-binding.component';
 
 describe('DemoTempSyntaxComponent', () => {
   let component: DemoDataBindingComponent;

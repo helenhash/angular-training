@@ -1,9 +1,11 @@
-<p>product works!</p>
-<div class="form-group">
-  <label for="file">Choose File</label>
-  <input type="file"
-         id="file"
-         (change)="handleFileInput($event.target.files)">
+<div class="container">
 
+  <div class="form-group form-inline">
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+    <button class="btn btn-success" type="submit" (click)="uploadFileToActivity()">Upload</button>
+  </div>
+  <button class="btn btn-danger" type="button" (click)="getProductName()">Get Product</button>
+  <p>{{productName}}</p>
 </div>
-<button class="btn btn-success" type="submit" (click)="uploadFileToActivity()">Upload</button>

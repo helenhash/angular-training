@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DemoDirectiveComponent } from './demo-directive.component';
+import {DemoDirectiveComponent} from './demo-directive.component';
 
 describe('DemoDirectiveComponent', () => {
   let component: DemoDirectiveComponent;

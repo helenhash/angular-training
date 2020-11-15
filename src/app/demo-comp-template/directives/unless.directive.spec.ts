@@ -1,4 +1,4 @@
-import { UnlessDirective } from './unless.directive';
+import {UnlessDirective} from './unless.directive';
 
 describe('UnlessDirective', () => {
   it('should create an instance', () => {

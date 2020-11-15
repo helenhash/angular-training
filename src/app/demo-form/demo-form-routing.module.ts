@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import { DemoReactiveComponent } from './demo-reactive/demo-reactive.component';
+import {DemoReactiveComponent} from './demo-reactive/demo-reactive.component';
 import {TemplateDrivenComponent} from '@app/demo-form/template-driven/template-driven.component';
 
 const routes: Routes = [

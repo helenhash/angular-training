@@ -2,7 +2,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {DemoDataBindingComponent} from '@app/demo-comp-template/demo-data-binding/demo-data-binding.component';
 import {DemoDirectiveComponent} from '@app/demo-comp-template/demo-directive/demo-directive.component';
-import { DemoHookComponent } from './demo-hook/demo-hook.component';
+import {DemoHookComponent} from './demo-hook/demo-hook.component';
 import {DemoPipeComponent} from '@app/demo-comp-template/demo-pipe/demo-pipe.component';
 import {DemoCompInteractionComponent} from '@app/demo-comp-template/demo-comp-interaction/demo-comp-interaction.component';
 

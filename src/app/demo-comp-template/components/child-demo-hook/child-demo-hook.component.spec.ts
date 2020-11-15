@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ChildDemoHookComponent } from './child-demo-hook.component';
+import {ChildDemoHookComponent} from './child-demo-hook.component';
 
 describe('ChildDemoHookComponent', () => {
   let component: ChildDemoHookComponent;

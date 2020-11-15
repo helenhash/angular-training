@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+
 export type EditorType = 'name' | 'profile';
 
 @Component({

@@ -1,78 +1,80 @@
-<h1>My First Attribute Directive</h1>
+<div class="container">
+  <h1>My First Attribute Directive</h1>
 
-<h4>Pick a highlight color</h4>
-<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
-</div>
-<p [appHighlight]="color">Highlight me!</p>
+  <h4>Pick a highlight color</h4>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <p [appHighlight]="color">Highlight me!</p>
 
-<p [appHighlight]="color" defaultColor="violet">
-  Highlight me too!
-</p>
+  <p [appHighlight]="color" defaultColor="violet">
+    Highlight me too!
+  </p>
 
-<hr>
-<p><i>Mouse over the following lines to see fixed highlights</i></p>
+  <hr>
+  <p><i>Mouse over the following lines to see fixed highlights</i></p>
 
-<p [appHighlight]="'yellow'">Highlighted in yellow</p>
-<p appHighlight="orange">Highlighted in orange</p>
+  <p [appHighlight]="'yellow'">Highlighted in yellow</p>
+  <p appHighlight="orange">Highlighted in orange</p>
 
-<hr>
+  <hr>
 
-<p>List of heroes</p>
+  <p>List of heroes</p>
 
-<ul>
-  <li *ngFor="let hero of heroes">{{hero.name}}</li>
-</ul>
+  <ul>
+    <li *ngFor="let hero of heroes">{{hero.name}}</li>
+  </ul>
 
-<hr>
+  <hr>
 
-<h4>NgIf with template</h4>
-<p>&lt;ng-template&gt; element</p>
-<ng-template [ngIf]="hero">
-  <div class="name">{{hero.name}}</div>
-</ng-template>
+  <h4>NgIf with template</h4>
+  <p>&lt;ng-template&gt; element</p>
+  <ng-template [ngIf]="hero">
+    <div class="name">{{hero.name}}</div>
+  </ng-template>
 
-<div *ngIf="hero">
-  <div class="name">{{hero.name}}</div>
-</div>
-<hr>
+  <div *ngIf="hero">
+    <div class="name">{{hero.name}}</div>
+  </div>
+  <hr>
 
-<h2 id="ng-container">&lt;ng-container&gt;</h2>
+  <h2 id="ng-container">&lt;ng-container&gt;</h2>
 
-<h4>*ngIf with a &lt;ng-container&gt;</h4>
+  <h4>*ngIf with a &lt;ng-container&gt;</h4>
 
-<button (click)="hero = hero ? null : heroes[0]">Toggle hero</button>
+  <button (click)="hero = hero ? null : heroes[0]">Toggle hero</button>
 
-<p>
-  I turned the corner
-  <ng-container *ngIf="hero">
-    and saw {{hero.name}}. I waved
+  <p>
+    I turned the corner
+    <ng-container *ngIf="hero">
+      and saw {{hero.name}}. I waved
+    </ng-container>
+    and continued on my way.
+  </p>
+  <p>
+    I turned the corner
+    <span *ngIf="hero">
+      and saw {{hero.name}}. I waved
+    </span>
+    and continued on my way.
+  </p>
+
+  <hr/>
+  <div *ngFor="let hero of heroes">
+    <div *ngIf="hero.id == 1">{{hero.name}}</div>
+  </div>
+  <ng-container *ngFor="let hero of heroes">
+    <div *ngIf="hero.id == 1">{{hero.name}}</div>
   </ng-container>
-  and continued on my way.
-</p>
-<p>
-  I turned the corner
-  <span *ngIf="hero">
-    and saw {{hero.name}}. I waved
-  </span>
-  and continued on my way.
-</p>
+  <hr/>
+  <p *appUnless="condition" class="unless a">
+    (A) This paragraph is displayed because the condition is false.
+  </p>
 
-<hr/>
-<div *ngFor="let hero of heroes">
-  <div *ngIf="hero.id == 1">{{hero.name}}</div>
+  <p *appUnless="!condition" class="unless b">
+    (B) Although the condition is true,
+    this paragraph is displayed because appUnless is set to false.
+  </p>
 </div>
-<ng-container *ngFor="let hero of heroes">
-  <div *ngIf="hero.id == 1">{{hero.name}}</div>
-</ng-container>
-<hr/>
-<p *appUnless="condition" class="unless a">
-  (A) This paragraph is displayed because the condition is false.
-</p>
-
-<p *appUnless="!condition" class="unless b">
-  (B) Although the condition is true,
-  this paragraph is displayed because appUnless is set to false.
-</p>

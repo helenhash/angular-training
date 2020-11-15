@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Hero} from '@app/demo-form/template-driven/hero';
 
 @Component({

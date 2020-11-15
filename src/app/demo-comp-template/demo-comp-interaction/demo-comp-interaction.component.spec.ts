@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DemoCompInteractionComponent } from './demo-comp-interaction.component';
+import {DemoCompInteractionComponent} from './demo-comp-interaction.component';
 
 describe('DemoCompInteractionComponent', () => {
   let component: DemoCompInteractionComponent;

@@ -4,8 +4,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {DatePickerComponent} from '@app/shared/components/date-picker/date-picker.component';
 import {
-  ModalActionComponent,
   CusModalComponent,
+  ModalActionComponent,
   ModalContentComponent,
 } from '@app/shared/components/my-modal/cus-modal.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +13,7 @@ import {MatchHeightDirective} from './directives/match-height.directive';
 import {PhonePipe} from './pipes/phone.pipe';
 import {ConfirmModalComponent} from './components/confirm-modal/confirm-modal.component';
 import {ExpandMenuDirective} from "@app/shared/directives/expand-menu.directive";
+import { SimpleModalComponent } from './components/simple-modal/simple-modal.component';
 
 
 const MODAL_CLASSES = [ModalActionComponent, CusModalComponent, ModalContentComponent];
@@ -32,7 +33,8 @@ const MODAL_CLASSES = [ModalActionComponent, CusModalComponent, ModalContentComp
     DatePickerComponent,
     CusModalComponent,
     ConfirmModalComponent,
-    ExpandMenuDirective
+    ExpandMenuDirective,
+    SimpleModalComponent
   ],
   exports: [
     CommonModule,
@@ -51,6 +53,7 @@ const MODAL_CLASSES = [ModalActionComponent, CusModalComponent, ModalContentComp
   ],
   entryComponents: [
     ConfirmModalComponent,
+    SimpleModalComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
 })

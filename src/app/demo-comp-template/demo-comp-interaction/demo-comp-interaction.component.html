@@ -1,3 +1,4 @@
+<div class="container">
 <h2>Master controls {{names.length}} names</h2>
 <app-name-child *ngFor="let name of names" [name]="name"></app-name-child>
 
@@ -7,3 +8,4 @@
 <button (click)="timer.stop()">Stop</button>
 <div class="seconds">{{timer.seconds}}</div>
 <countdown-timer #timer></countdown-timer>
+</div>

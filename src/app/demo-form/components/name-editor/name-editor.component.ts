@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import {Component} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {forbiddenNameValidator} from '@app/demo-form/validation/nameValidator';
 
 @Component({

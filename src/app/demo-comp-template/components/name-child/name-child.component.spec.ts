@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { NameChildComponent } from './name-child.component';
+import {NameChildComponent} from './name-child.component';
 
 describe('NameChildComponent', () => {
   let component: NameChildComponent;

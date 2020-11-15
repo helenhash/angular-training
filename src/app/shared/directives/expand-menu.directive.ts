@@ -1,4 +1,4 @@
-import {AfterViewInit, Directive, ElementRef, HostBinding, HostListener, OnChanges, Renderer2} from '@angular/core';
+import {Directive, HostBinding, HostListener} from '@angular/core';
 
 @Directive({
   selector: '[appExpandMenu]'

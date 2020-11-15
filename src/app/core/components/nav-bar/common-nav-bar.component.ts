@@ -1,17 +1,8 @@
-import {
-  Component,
-  ContentChild,
-  ContentChildren,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  QueryList,
-  TemplateRef,
-  ViewChild
-} from '@angular/core';
-import {AppConstants} from '@app/app.constants';
+import {Component, OnInit} from '@angular/core';
 import {DemoRoute, RouteConstants} from '@app/app-routing.module';
+import {AuthService} from "@app/login/service/auth.service";
+import {Router} from "@angular/router";
+import {User} from "@app/login/model/user";
 
 
 @Component({
@@ -23,15 +14,21 @@ export class CommonNavBarComponent implements OnInit {
 
   navbarOpen = false;
   routes: DemoRoute[] = RouteConstants.ROUTES
+  currentUser: User;
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
-  constructor() {
+
+  constructor(private authService: AuthService, private router: Router) {
+    this.authService.currentUser.subscribe(x => this.currentUser = x);
   }
 
   ngOnInit() {
   }
 
-
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { CountdownTimerComponent } from '../components/countdown-timer/countdown-timer.component';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {CountdownTimerComponent} from '../components/countdown-timer/countdown-timer.component';
 
 @Component({
   selector: 'demo-comp-interaction',

@@ -1,5 +1,4 @@
 import * as _ from 'lodash';
-import {ColumnConstant, StatusConstant} from '@app/core/util/common.constants';
 
 export default class StringUtils {
 

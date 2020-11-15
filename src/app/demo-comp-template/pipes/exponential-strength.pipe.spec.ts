@@ -1,4 +1,4 @@
-import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import {ExponentialStrengthPipe} from './exponential-strength.pipe';
 
 describe('ExponentialStrengthPipe', () => {
   it('create an instance', () => {

@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {RouterConfig} from '@app/app.constants';
 import {HomeComponent} from '@app/home/home.component';
-import {LoginComponent} from '@app/login/login.component';
+import {AuthGuard} from "@app/login/service/auth-guard.service";
 
 export class RouteConstants {
   // this object drives the side menu, use sub menu for collapse-able side menu
@@ -46,14 +46,21 @@ export interface SubRoute {
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: () => {
+      return import('./login/login.module').then(mod => mod.LoginModule);
+    },
+  },
+  {
     path: '',
-    component: LoginComponent
+    component: HomeComponent
   },
   {
     path: RouterConfig.COMP_DEMO.path,
     loadChildren: () => {
       return import('./demo-comp-template/demo-comp-template.module').then(mod => mod.DemoCompTemplateModule);
     },
+    canActivate: [AuthGuard]
   },
   {
     path: RouterConfig.FORM_DEMO.path,

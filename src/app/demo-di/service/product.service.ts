@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {ProductModel} from '@app/demo-di/service/product.model';
@@ -10,8 +10,8 @@ export class ProductServie {
 
   constructor(private http: HttpClient) { }
 
-  getProductName(): Observable<string> {
-    return this.http.get<string> ('/api/spring-rest/product');
+  getProduct(): Observable<ProductModel> {
+    return this.http.get<ProductModel> ('/api/spring-rest/product/get-product');
   }
 
   createProduct(models: ProductModel): Observable<string> {
