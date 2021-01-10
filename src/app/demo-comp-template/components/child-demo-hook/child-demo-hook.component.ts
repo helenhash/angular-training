@@ -17,6 +17,7 @@ export class ChildDemoHookComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
+    this.test = 'change';
     console.log(this.test);
   }
 }

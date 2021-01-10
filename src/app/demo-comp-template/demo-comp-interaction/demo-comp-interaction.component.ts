@@ -7,7 +7,7 @@ import {CountdownTimerComponent} from '../components/countdown-timer/countdown-t
   styleUrls: ['./demo-comp-interaction.component.scss']
 })
 export class DemoCompInteractionComponent implements AfterViewInit {
-  names = ['Dr IQ', '   ', '  Bombasto  '];
+  names = ['ABC', '   ', '  Yes  '];
 
   @ViewChild(CountdownTimerComponent, {static: true})
   private timerComponent: CountdownTimerComponent;

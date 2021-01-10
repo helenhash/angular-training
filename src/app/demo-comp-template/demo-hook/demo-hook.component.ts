@@ -11,7 +11,7 @@ export class DemoHookComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.testDemo = 'demo lifecycle hook - first value';
+    this.testDemo = 'First value';
   }
 
 }
